@@ -46,7 +46,8 @@ shinyUI(fluidPage(
 
         tabsetPanel(
             tabPanel("Overview & Example Dataset", value=1, 
-                     includeMarkdown("overview.md")
+                     includeMarkdown("overview.md"),
+                     downloadButton('downloadData', 'Download RFM-CLV transactions sample file'), br()
             ),
             tabPanel("Data Summary", value=2,
                     h4("Data Dimensions"),
