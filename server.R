@@ -223,4 +223,17 @@ shinyServer(function(input, output,session) {
   }
 )
   
+    output$downloadData02 <- downloadHandler(
+  filename = function() { "retail_txns_short.csv" },
+  content = function(file) {
+    write.csv(read.csv("data/retail_txns_short.csv"), file, row.names=F, col.names=F)
+  }
+)
+ 
+    output$downloadData <- downloadHandler(
+  filename = function() { "UKeComm.csv" },
+  content = function(file) {
+    write.csv(read.csv("data/UKecomm_short.csv"), file, row.names=F, col.names=F)
+  }
+)
 })
