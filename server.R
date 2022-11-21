@@ -230,7 +230,7 @@ shinyServer(function(input, output,session) {
   }
 )
  
-    output$downloadData <- downloadHandler(
+    output$downloadData03 <- downloadHandler(
   filename = function() { "UKeComm.csv" },
   content = function(file) {
     write.csv(read.csv("data/UKecomm_short.csv"), file, row.names=F, col.names=F)
